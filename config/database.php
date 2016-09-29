@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'couchbase'),
 
     /*
     |--------------------------------------------------------------------------
@@ -50,6 +50,17 @@ return [
             'driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
+        ],
+        'couchbase' => [
+            'driver' => 'couchbase',
+            'host' => 'couchbase://127.0.0.1:8091',
+            'user' => 'Administrator', // optional administrator
+            'password' => 'admin123', // optional administrator
+            // optional configuration / management operations against a bucket.
+            'administrator' => [
+                'user'     => 'Administrator',
+                'password' => 'admin123',
+            ],
         ],
 
         'mysql' => [

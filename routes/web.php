@@ -10,7 +10,9 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', 'ExecuteTask@RunQuery');
+Route::get('/', 'TaskController@get_design');
+Route::get('retapi', 'TaskController@getdataAPI');
+Route::post('insert', 'TaskController@storedata');
+Route::post('delete', 'TaskController@removedata');
+Route::post('update', 'TaskController@editdata');

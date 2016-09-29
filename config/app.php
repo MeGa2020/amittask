@@ -177,6 +177,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        // added service provider
+    \Ytake\LaravelCouchbase\CouchbaseServiceProvider::class,
+    //\Ytake\LaravelCouchbase\ConsoleServiceProvider::class,
 
     ],
 
